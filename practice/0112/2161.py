@@ -14,17 +14,20 @@
 # 첫째 줄에 버리는 카드들을 순서대로 출력한다. 제일 마지막에는 남게 되는 카드의 번호를 출력한다.
 
 from collections import deque
-print(deque(range(1,5))) #1~n+1번까지 range
+
+n=int(input())
+# print(deque(range(1,n+1))) #1~n+1번까지 range
 # deque([1, 2, 3, 4])
-q=deque(range(1,5))
+q=deque(range(1,n+1))
 del_card=[]
 
 while len(q)!=1:
     del_card.append(q.popleft()) #버린 카드들 리스트로 저장
     q.append(q.popleft())#맨 왼쪽카드를 오른쪽으로 이동
 
-    print(q)
-    print(del_card)
+    # print(q)
+    # print(del_card)
 
-print(f"마지막 카드: {' '.join(map(str,q))}")
-print(f"버린 카드: {' '.join(map(str,del_card))}")
+# print(f"마지막 카드: {' '.join(map(str,q))}")
+# print(f"버린 카드: {' '.join(map(str,del_card))}")
+print(*del_card, q[0])

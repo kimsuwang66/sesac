@@ -28,21 +28,4 @@ mat = [
 
 
 # 1부터 시작하는 n * m 크기의 2차원 배열 만들기
-n=4
-m=3
-lst=[]
 
-
-
-# for i in range(len(mat)):         
-#     for j in range(len(mat[i])):
-#         print(mat[i][j], end=' ')
-
-print()
-
-mat = [
-    [i+1 for i in range(n)]
-        for j in range(m)]
-    
-
-print(mat)

@@ -20,10 +20,8 @@ input = sys.stdin.readline
 lst=[]
 
 
-for i in range(1,6):
+for i in range(5):
     lst.append(list(input()))
 
 for i in lst:
     print(i)
-    for j in range(i[i]):
-        print(j)

@@ -9,14 +9,13 @@
 # 입력
 # 첫째 줄에 N과 K가 빈 칸을 사이에 두고 순서대로 주어진다. (1 ≤ K ≤ N ≤ 5,000)
 from collections import deque
-n = int(input())
-k = int(input())
+
+n, k = map(int, input().split())
 lst = deque(range(1,n+1))
 answer = deque()
 
 while lst:
-    print(lst)
-    lst.rotate(-2)
+    lst.rotate(-(k-1))
     answer.append(lst.popleft())
     
-print(answer)
+print(f"<{', '.join(map(str, answer))}>")
